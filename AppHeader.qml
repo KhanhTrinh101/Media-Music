@@ -4,7 +4,7 @@ Item {
     Image {
         id: headerItem
         anchors.fill: parent
-        source: "qrc:/Image/title.png"
+        source: "qrc:/images/back ground/title.png"
         // nút nhấn drawer
         SwitchButton {
             id: playlist_button
@@ -13,8 +13,8 @@ Item {
             anchors.left: parent.left
             anchors.leftMargin: widthSize / 2
             anchors.verticalCenter: parent.verticalCenter
-            icon_off: "qrc:/Image/drawer_p.png"
-            icon_on: "qrc:/Image/back.png"
+            icon_off: "qrc:/images/icon/drawer_p.png"
+            icon_on: "qrc:/images/icon/back.png"
             onStatusChanged: {
                 if(playlist_button.status === 1) {
                     playlist.open()
@@ -49,7 +49,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: playlist_button.heihgtSize
             height: playlist_button.heihgtSize
-            source: "qrc:/Image/vn.png"
+            source: "qrc:/images/icon/vn.png"
             property bool click_vn_flag: false
             Rectangle{
                 width: parent.width
@@ -77,7 +77,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: vn_flag.width
             height: vn_flag.width
-            source: "qrc:/Image/us.png"
+            source: "qrc:/images/icon/us.png"
             property bool click_us_flag: true
             Rectangle{
                 width: parent.width

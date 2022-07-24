@@ -1,44 +1,162 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Image/Bui-Anh-Tuan.png</file>
-        <file>Image/Ha-Anh-Tuan.png</file>
-        <file>Image/hold.png</file>
-        <file>Image/hold-next.png</file>
-        <file>Image/hold-pause.png</file>
-        <file>Image/hold-play.png</file>
-        <file>Image/hold-prev.png</file>
-        <file>Image/Hongkong1.png</file>
-        <file>Image/music.png</file>
-        <file>Image/next.png</file>
-        <file>Image/pause.png</file>
-        <file>Image/play.png</file>
-        <file>Image/playing.png</file>
-        <file>Image/prev.png</file>
-        <file>Image/repeat.png</file>
-        <file>Image/repeat1_hold.png</file>
-        <file>Image/shuffle.png</file>
-        <file>Image/shuffle-1.png</file>
-        <file>Image/USB Mussic.png</file>
-        <file>Image/background.png</file>
-        <file>Image/title.png</file>
-        <file>Image/playlist.png</file>
-        <file>Image/playlist_item.png</file>
-        <file>Image/progress_bar.png</file>
-        <file>Image/progress_bar_bg.png</file>
-        <file>Image/center_point.png</file>
-        <file>Image/point.png</file>
         <file>ButtonControl.qml</file>
         <file>SwitchButton.qml</file>
-        <file>Image/album_art.png</file>
         <file>AppHeader.qml</file>
         <file>MediaInfoControl.qml</file>
         <file>PlaylistView.qml</file>
-        <file>Image/us.png</file>
-        <file>Image/vn.png</file>
-        <file>Image/back.png</file>
-        <file>Image/drawer_p.png</file>
         <file>translate_us.qm</file>
         <file>translate_vn.qm</file>
+        <file>images/icon/back.png</file>
+        <file>images/icon/center_point.png</file>
+        <file>images/icon/drawer_p.png</file>
+        <file>images/icon/music.png</file>
+        <file>images/icon/playing.png</file>
+        <file>images/icon/point.png</file>
+        <file>images/icon/progress_bar.png</file>
+        <file>images/icon/progress_bar_bg.png</file>
+        <file>images/icon/us.png</file>
+        <file>images/icon/vn.png</file>
+        <file>images/Button Control/hold-next.png</file>
+        <file>images/Button Control/hold-pause.png</file>
+        <file>images/Button Control/hold-play.png</file>
+        <file>images/Button Control/hold-prev.png</file>
+        <file>images/Button Control/next.png</file>
+        <file>images/Button Control/pause.png</file>
+        <file>images/Button Control/play.png</file>
+        <file>images/Button Control/prev.png</file>
+        <file>images/Button Control/repeat.png</file>
+        <file>images/Button Control/repeat1_hold.png</file>
+        <file>images/Button Control/shuffle.png</file>
+        <file>images/Button Control/shuffle-1.png</file>
+        <file>images/back ground/album_art.png</file>
+        <file>images/back ground/background.png</file>
+        <file>images/back ground/playlist.png</file>
+        <file>images/back ground/playlist_item.png</file>
+        <file>images/back ground/title.png</file>
+        <file>imports/MyTagLib/include/aifffile.h</file>
+        <file>imports/MyTagLib/include/aiffproperties.h</file>
+        <file>imports/MyTagLib/include/apefile.h</file>
+        <file>imports/MyTagLib/include/apefooter.h</file>
+        <file>imports/MyTagLib/include/apeitem.h</file>
+        <file>imports/MyTagLib/include/apeproperties.h</file>
+        <file>imports/MyTagLib/include/apetag.h</file>
+        <file>imports/MyTagLib/include/asfattribute.h</file>
+        <file>imports/MyTagLib/include/asffile.h</file>
+        <file>imports/MyTagLib/include/asfpicture.h</file>
+        <file>imports/MyTagLib/include/asfproperties.h</file>
+        <file>imports/MyTagLib/include/asftag.h</file>
+        <file>imports/MyTagLib/include/asfutils.h</file>
+        <file>imports/MyTagLib/include/attachedpictureframe.h</file>
+        <file>imports/MyTagLib/include/audioproperties.h</file>
+        <file>imports/MyTagLib/include/chapterframe.h</file>
+        <file>imports/MyTagLib/include/commentsframe.h</file>
+        <file>imports/MyTagLib/include/eventtimingcodesframe.h</file>
+        <file>imports/MyTagLib/include/fileref.h</file>
+        <file>imports/MyTagLib/include/flacfile.h</file>
+        <file>imports/MyTagLib/include/flacmetadatablock.h</file>
+        <file>imports/MyTagLib/include/flacpicture.h</file>
+        <file>imports/MyTagLib/include/flacproperties.h</file>
+        <file>imports/MyTagLib/include/flacunknownmetadatablock.h</file>
+        <file>imports/MyTagLib/include/generalencapsulatedobjectframe.h</file>
+        <file>imports/MyTagLib/include/id3v1genres.h</file>
+        <file>imports/MyTagLib/include/id3v1tag.h</file>
+        <file>imports/MyTagLib/include/id3v2extendedheader.h</file>
+        <file>imports/MyTagLib/include/id3v2footer.h</file>
+        <file>imports/MyTagLib/include/id3v2frame.h</file>
+        <file>imports/MyTagLib/include/id3v2framefactory.h</file>
+        <file>imports/MyTagLib/include/id3v2header.h</file>
+        <file>imports/MyTagLib/include/id3v2synchdata.h</file>
+        <file>imports/MyTagLib/include/id3v2tag.h</file>
+        <file>imports/MyTagLib/include/infotag.h</file>
+        <file>imports/MyTagLib/include/itfile.h</file>
+        <file>imports/MyTagLib/include/itproperties.h</file>
+        <file>imports/MyTagLib/include/modfile.h</file>
+        <file>imports/MyTagLib/include/modfilebase.h</file>
+        <file>imports/MyTagLib/include/modfileprivate.h</file>
+        <file>imports/MyTagLib/include/modproperties.h</file>
+        <file>imports/MyTagLib/include/modtag.h</file>
+        <file>imports/MyTagLib/include/mp4atom.h</file>
+        <file>imports/MyTagLib/include/mp4coverart.h</file>
+        <file>imports/MyTagLib/include/mp4file.h</file>
+        <file>imports/MyTagLib/include/mp4item.h</file>
+        <file>imports/MyTagLib/include/mp4properties.h</file>
+        <file>imports/MyTagLib/include/mp4tag.h</file>
+        <file>imports/MyTagLib/include/mpcfile.h</file>
+        <file>imports/MyTagLib/include/mpcproperties.h</file>
+        <file>imports/MyTagLib/include/mpegfile.h</file>
+        <file>imports/MyTagLib/include/mpegheader.h</file>
+        <file>imports/MyTagLib/include/mpegproperties.h</file>
+        <file>imports/MyTagLib/include/mpegutils.h</file>
+        <file>imports/MyTagLib/include/oggfile.h</file>
+        <file>imports/MyTagLib/include/oggflacfile.h</file>
+        <file>imports/MyTagLib/include/oggpage.h</file>
+        <file>imports/MyTagLib/include/oggpageheader.h</file>
+        <file>imports/MyTagLib/include/opusfile.h</file>
+        <file>imports/MyTagLib/include/opusproperties.h</file>
+        <file>imports/MyTagLib/include/ownershipframe.h</file>
+        <file>imports/MyTagLib/include/podcastframe.h</file>
+        <file>imports/MyTagLib/include/popularimeterframe.h</file>
+        <file>imports/MyTagLib/include/privateframe.h</file>
+        <file>imports/MyTagLib/include/relativevolumeframe.h</file>
+        <file>imports/MyTagLib/include/rifffile.h</file>
+        <file>imports/MyTagLib/include/riffutils.h</file>
+        <file>imports/MyTagLib/include/s3mfile.h</file>
+        <file>imports/MyTagLib/include/s3mproperties.h</file>
+        <file>imports/MyTagLib/include/speexfile.h</file>
+        <file>imports/MyTagLib/include/speexproperties.h</file>
+        <file>imports/MyTagLib/include/synchronizedlyricsframe.h</file>
+        <file>imports/MyTagLib/include/tableofcontentsframe.h</file>
+        <file>imports/MyTagLib/include/tag.h</file>
+        <file>imports/MyTagLib/include/tag_c.h</file>
+        <file>imports/MyTagLib/include/taglib.h</file>
+        <file>imports/MyTagLib/include/taglib_config.h</file>
+        <file>imports/MyTagLib/include/taglib_export.h</file>
+        <file>imports/MyTagLib/include/tagunion.h</file>
+        <file>imports/MyTagLib/include/tagutils.h</file>
+        <file>imports/MyTagLib/include/tbytevector.h</file>
+        <file>imports/MyTagLib/include/tbytevectorlist.h</file>
+        <file>imports/MyTagLib/include/tbytevectorstream.h</file>
+        <file>imports/MyTagLib/include/tdebug.h</file>
+        <file>imports/MyTagLib/include/tdebuglistener.h</file>
+        <file>imports/MyTagLib/include/textidentificationframe.h</file>
+        <file>imports/MyTagLib/include/tfile.h</file>
+        <file>imports/MyTagLib/include/tfilestream.h</file>
+        <file>imports/MyTagLib/include/tiostream.h</file>
+        <file>imports/MyTagLib/include/tlist.h</file>
+        <file>imports/MyTagLib/include/tlist.tcc</file>
+        <file>imports/MyTagLib/include/tmap.h</file>
+        <file>imports/MyTagLib/include/tmap.tcc</file>
+        <file>imports/MyTagLib/include/tpropertymap.h</file>
+        <file>imports/MyTagLib/include/trefcounter.h</file>
+        <file>imports/MyTagLib/include/trueaudiofile.h</file>
+        <file>imports/MyTagLib/include/trueaudioproperties.h</file>
+        <file>imports/MyTagLib/include/tstring.h</file>
+        <file>imports/MyTagLib/include/tstringlist.h</file>
+        <file>imports/MyTagLib/include/tutils.h</file>
+        <file>imports/MyTagLib/include/tzlib.h</file>
+        <file>imports/MyTagLib/include/unicode.h</file>
+        <file>imports/MyTagLib/include/uniquefileidentifierframe.h</file>
+        <file>imports/MyTagLib/include/unknownframe.h</file>
+        <file>imports/MyTagLib/include/unsynchronizedlyricsframe.h</file>
+        <file>imports/MyTagLib/include/urllinkframe.h</file>
+        <file>imports/MyTagLib/include/utils.h</file>
+        <file>imports/MyTagLib/include/vorbisfile.h</file>
+        <file>imports/MyTagLib/include/vorbisproperties.h</file>
+        <file>imports/MyTagLib/include/wavfile.h</file>
+        <file>imports/MyTagLib/include/wavpackfile.h</file>
+        <file>imports/MyTagLib/include/wavpackproperties.h</file>
+        <file>imports/MyTagLib/include/wavproperties.h</file>
+        <file>imports/MyTagLib/include/xingheader.h</file>
+        <file>imports/MyTagLib/include/xiphcomment.h</file>
+        <file>imports/MyTagLib/include/xmfile.h</file>
+        <file>imports/MyTagLib/include/xmproperties.h</file>
+        <file>imports/MyTagLib/ubuntu/libMyTagLib.so</file>
+        <file>imports/MyTagLib/ubuntu/libMyTagLib.so.1</file>
+        <file>imports/MyTagLib/ubuntu/libMyTagLib.so.1.0</file>
+        <file>imports/MyTagLib/ubuntu/libMyTagLib.so.1.0.0</file>
+        <file>imports/MyTagLib/windows/MyTagLib.dll</file>
+        <file>images/back ground/hold.png</file>
     </qresource>
 </RCC>

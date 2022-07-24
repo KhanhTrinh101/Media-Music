@@ -27,7 +27,7 @@ Drawer {
                 id: playlistItem
                 width: mediaPlaylist.width
                 height: mediaPlaylist.height / 6
-                source: "qrc:/Image/playlist.png"
+                source: "qrc:/images/back ground/playlist.png"
                 opacity: 0.5
             }
             Text {
@@ -43,13 +43,13 @@ Drawer {
                 player.playlist.setCurrentIndex(index)
             }
             onPressed: {
-                playlistItem.source = "qrc:/Image/hold.png"
+                playlistItem.source = "qrc:/images/back ground/hold.png"
             }
             onReleased: {
-                playlistItem.source = "qrc:/Image/playlist.png"
+                playlistItem.source = "qrc:/images/back ground/hold.png"
             }
             onCanceled:  {
-                playlistItem.source = "qrc:/Image/playlist.png"
+                playlistItem.source = "qrc:/images/back ground/playlist.png"
             }
         }
         // nếu local file music rỗng thì danh sách sẽ hiển thị một thông báo
@@ -62,11 +62,11 @@ Drawer {
         }
 
         highlight: Image {
-            source: "qrc:/Image/playlist_item.png"
+            source: "qrc:/images/back ground/playlist_item.png"
             width: mediaPlaylist.width
             height: mediaPlaylist.height / 6
             Image {
-                source: "qrc:/Image/playing.png"
+                source: "qrc:/images/back ground/playlist_item.png"
                 anchors.left: parent.left
                 anchors.leftMargin: width / 2
                 anchors.verticalCenter: parent.verticalCenter

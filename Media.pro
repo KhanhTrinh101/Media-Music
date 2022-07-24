@@ -20,19 +20,6 @@ SOURCES += \
 
 RESOURCES += qml.qrc
 
-#===========start config taglib==========================
-INCLUDEPATH += MyTagLib/include
-
-# Default rules for deployment.
-win32 {
-    LIBS += -L$$PWD/MyTagLib/windows -lMyTagLib
-}
-
-linux {
-    LIBS += -L$$PWD/MyTagLib/ubuntu -lMyTagLib
-}
-
-#===========end config taglib==========================
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -56,5 +43,19 @@ HEADERS += \
     player.h \
     playlistmodel.h \
     translator.h
+
+#===========start config taglib==========================
+INCLUDEPATH += MyTagLib/include
+
+# Default rules for deployment.
+win32 {
+    LIBS += -L$$PWD/imports/MyTagLib/windows -lMyTagLib
+}
+
+linux {
+    LIBS += -L$$PWD/imports/MyTagLib/ubuntu -lMyTagLib
+}
+
+#===========end config taglib==========================
 
 

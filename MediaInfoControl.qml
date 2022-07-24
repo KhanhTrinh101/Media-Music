@@ -50,7 +50,7 @@ Item {
         font.pixelSize: headerItem.height / 3.5
 
         Image {
-            source: "qrc:/Image/music.png"
+            source: "qrc:/images/icon/music.png"
             height: parent.height / 1.4
             width: height
             anchors.right: parent.left
@@ -171,10 +171,10 @@ Item {
             width: height
             x: progressBar.leftPadding + progressBar.visualPosition * (progressBar.availableWidth - width)
             y: progressBar.topPadding + progressBar.availableHeight / 2 - height / 2
-            source: "qrc:/Image/point.png"
+            source: "qrc:/images/icon/point.png"
             Image {
                 anchors.centerIn: parent
-                source: "qrc:/Image/center_point.png"
+                source: "qrc:/images/icon/center_point.png"
                 height: parent.height/1.5
                 width: height
             }
@@ -194,8 +194,8 @@ Item {
         heihgtSize: prev.heihgtSize / 1.5
         anchors.verticalCenter: play.verticalCenter
         anchors.left: currentTime.left
-        icon_off: "qrc:/Image/shuffle.png"
-        icon_on: "qrc:/Image/shuffle-1.png"
+        icon_off: "qrc:/images/Button Control/shuffle.png"
+        icon_on: "qrc:/images/Button Control/shuffle-1.png"
 
         onStatusChanged: {
             if(shuffer.status === 1)
@@ -215,9 +215,9 @@ Item {
         heihgtSize: play.heihgtSize / 2
         anchors.verticalCenter: play.verticalCenter
         anchors.right: play.left
-        icon_default: "qrc:/Image/prev.png"
-        icon_pressed: "qrc:/Image/hold-prev.png"
-        icon_released: "qrc:/Image/prev.png"
+        icon_default: "qrc:/images/Button Control/prev.png"
+        icon_pressed: "qrc:/images/Button Control/hold-prev.png"
+        icon_released: "qrc:/images/Button Control/prev.png"
         onClicked: {
             // khi lùi nếu index bằng 0 thì gán về cuối danh sách
             if (player.playlist.currentIndex > 0)
@@ -233,9 +233,9 @@ Item {
         anchors.top: progressBar.bottom
         anchors.topMargin: heihgtSize * 0.1
         anchors.horizontalCenter: progressBar.horizontalCenter
-        icon_default: player.state == MediaPlayer.PlayingState ?  "qrc:/Image/pause.png" : "qrc:/Image/play.png"
-        icon_pressed: player.state == MediaPlayer.PlayingState ?  "qrc:/Image/hold-pause.png" : "qrc:/Image/hold-play.png"
-        icon_released: player.state== MediaPlayer.PlayingState ?  "qrc:/Image/pause.png" : "qrc:/Image/play.png"
+        icon_default: player.state == MediaPlayer.PlayingState ?  "qrc:/images/Button Control/pause.png" : "qrc:/images/Button Control/play.png"
+        icon_pressed: player.state == MediaPlayer.PlayingState ?  "qrc:/images/Button Control/hold-pause.png" : "qrc:/images/Button Control/hold-play.png"
+        icon_released: player.state== MediaPlayer.PlayingState ?  "qrc:/images/Button Control/pause.png" : "qrc:/images/Button Control/play.png"
         onClicked: {
             if (player.state != MediaPlayer.PlayingState){
                 player.play()
@@ -246,7 +246,7 @@ Item {
         Connections {
             target: player
             onStateChanged:{
-                play.source = player.state == MediaPlayer.PlayingState ?  "qrc:/Image/pause.png" : "qrc:/Image/play.png"
+                play.source = player.state == MediaPlayer.PlayingState ?  "qrc:/images/Button Control/pause.png" : "qrc:/images/Button Control/play.png"
             }
         }
     }
@@ -257,9 +257,9 @@ Item {
         heihgtSize: play.heihgtSize / 2
         anchors.verticalCenter: play.verticalCenter
         anchors.left: play.right
-        icon_default: "qrc:/Image/next.png"
-        icon_pressed: "qrc:/Image/hold-next.png"
-        icon_released: "qrc:/Image/next.png"
+        icon_default: "qrc:/images/Button Control/next.png"
+        icon_pressed: "qrc:/images/Button Control/hold-next.png"
+        icon_released: "qrc:/images/Button Control/next.png"
         onClicked: {
             // khi tiến nếu index ở cuối danh sách thì gán về đầu danh sách
             if (player.playlist.currentIndex < album_art_view.count -1)
@@ -274,8 +274,8 @@ Item {
         heihgtSize: next.heihgtSize / 1.5
         anchors.verticalCenter: play.verticalCenter
         anchors.right: totalTime.right
-        icon_on: "qrc:/Image/repeat1_hold.png"
-        icon_off: "qrc:/Image/repeat.png"
+        icon_on: "qrc:/images/Button Control/repeat1_hold.png"
+        icon_off: "qrc:/images/Button Control/repeat.png"
 
         onStatusChanged: {
             if(repeater.status === 1) {

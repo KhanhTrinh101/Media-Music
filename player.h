@@ -53,13 +53,13 @@
 
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
-#include <MyTagLib/include/tag.h>
-#include <MyTagLib/include/fileref.h>
-#include <MyTagLib/include/id3v2tag.h>
-#include <MyTagLib/include/mpegfile.h>
-#include <MyTagLib/include/id3v2frame.h>
-#include <MyTagLib/include/id3v2header.h>
-#include <MyTagLib/include/attachedpictureframe.h>
+#include <imports/MyTagLib/include/tag.h>
+#include <imports/MyTagLib/include/fileref.h>
+#include <imports/MyTagLib/include/id3v2tag.h>
+#include <imports/MyTagLib/include/mpegfile.h>
+#include <imports/MyTagLib/include/id3v2frame.h>
+#include <imports/MyTagLib/include/id3v2header.h>
+#include <imports/MyTagLib/include/attachedpictureframe.h>
 
 QT_BEGIN_NAMESPACE
 class QAbstractItemView;
