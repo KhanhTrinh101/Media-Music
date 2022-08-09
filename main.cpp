@@ -16,6 +16,12 @@ int main(int argc, char *argv[])
     qRegisterMetaType<QMediaPlaylist::PlaybackMode>("QMediaPlaylist::PlaybackMode");
 
     QGuiApplication app(argc, argv);
+
+    app.setOrganizationName("Some Company");
+    app.setOrganizationDomain("somecompany.com");
+    app.setApplicationName("Amazing Application");
+
+
     QQmlApplicationEngine engine;
 
     Translator translator;

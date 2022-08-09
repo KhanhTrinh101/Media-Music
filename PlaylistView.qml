@@ -46,7 +46,7 @@ Drawer {
                 playlistItem.source = "qrc:/images/back ground/hold.png"
             }
             onReleased: {
-                playlistItem.source = "qrc:/images/back ground/hold.png"
+                playlistItem.source = "qrc:/images/back ground/playlist.png"
             }
             onCanceled:  {
                 playlistItem.source = "qrc:/images/back ground/playlist.png"

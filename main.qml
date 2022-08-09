@@ -1,14 +1,13 @@
 import QtQuick 2.6
 import QtQuick.Controls 2.4
-
+import Qt.labs.settings 1.0
 
 ApplicationWindow {
     id: root
     visible: true
-    width: 1920 / 2
-    height: 1000 / 2
-     // visibility: "FullScreen"
-    title: qsTr("STR_MAIN_TITLE")
+    width: 1920
+    height: 1200
+    title: qsTr("STR_MAIN_TITLE") + Translator.updateText
 
     // Backgroud of Application
     Image {
@@ -40,6 +39,14 @@ ApplicationWindow {
         anchors.left: parent.left
         anchors.leftMargin: playlist.width
         anchors.bottom: parent.bottom
+    }
+
+    Settings {
+        category: "window"
+        property alias x: root.x
+        property alias y: root.y
+        property alias width: root.width
+        property alias height: root.height
     }
 
 

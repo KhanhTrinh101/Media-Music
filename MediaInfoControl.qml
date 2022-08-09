@@ -12,7 +12,7 @@ Item {
         anchors.topMargin: headerItem.height / 6
         anchors.left: parent.left
         anchors.leftMargin: headerItem.height / 6
-        text: !!album_art_view.currentItem ? album_art_view.currentItem.myData.title : "title"
+        text: album_art_view.currentItem ? album_art_view.currentItem.myData.title : "title"
         color: "white"
         font.pixelSize: headerItem.height / 4
         onTextChanged: {
@@ -25,7 +25,7 @@ Item {
         id: audioSinger
         anchors.top: audioTitle.bottom
         anchors.left: audioTitle.left
-        text: !!album_art_view.currentItem ?  album_art_view.currentItem.myData.singer : "singer"
+        text: album_art_view.currentItem ?  album_art_view.currentItem.myData.singer : "singer"
 
         color: "white"
         font.pixelSize: headerItem.height / 5.5
@@ -124,7 +124,7 @@ Item {
 
         anchors.right: progressBar.left
         anchors.rightMargin: headerItem.height / 6
-        text: !!utility ? utility.getTimeInfo(player.position) : "00:00"
+        text: utility ? utility.getTimeInfo(player.position) : "00:00"
 
         color: "white"
         font.pixelSize: headerItem.height / 4
@@ -134,7 +134,7 @@ Item {
         anchors.verticalCenter: progressBar.verticalCenter
         anchors.left: progressBar.right
         anchors.leftMargin: headerItem.height / 6
-        text: !!utility ? utility.getTimeInfo(player.duration) : "00:00"
+        text: utility ? utility.getTimeInfo(player.duration) : "00:00"
 
         color: "white"
         font.pixelSize: headerItem.height / 4
@@ -200,11 +200,21 @@ Item {
         onStatusChanged: {
             if(shuffer.status === 1)
             {
-                console.log("Playlist.Random ON")
-                APP_CTRL.playBackModeList(Playlist.Random)
+                if(repeater.status === 1) {
+                    console.log("Playlist.CurrentItemInLoop ON")
+                    APP_CTRL.playBackModeList(Playlist.CurrentItemInLoop)
+                }else {
+                    console.log("Playlist.Random ON")
+                    APP_CTRL.playBackModeList(Playlist.Random)
+                }
             }else{
-                console.log("Playlist.Sequential ON")
-                APP_CTRL.playBackModeList(Playlist.Sequential)
+                if(repeater.status === 1) {
+                    console.log("Playlist.CurrentItemInLoop ON")
+                    APP_CTRL.playBackModeList(Playlist.CurrentItemInLoop)
+                }else {
+                    console.log("Playlist.Sequential ON")
+                    APP_CTRL.playBackModeList(Playlist.Sequential)
+                }
             }
         }
     }
@@ -220,9 +230,17 @@ Item {
         icon_released: "qrc:/images/Button Control/prev.png"
         onClicked: {
             // khi lùi nếu index bằng 0 thì gán về cuối danh sách
-            if (player.playlist.currentIndex > 0)
-                player.playlist.previous()
-            else player.playlist.setCurrentIndex(album_art_view.count-1)
+            if(shuffer.status === 1){
+                var newindex = Math.floor(Math.random() * album_art_view.count)
+                while(newindex === player.playlist.currentIndex){
+                    newindex = Math.floor(Math.random() * album_art_view.count)
+                }
+                player.playlist.setCurrentIndex(newindex)
+            }else {
+                if (player.playlist.currentIndex > 0)
+                    player.playlist.setCurrentIndex(player.playlist.currentIndex - 1)
+                else player.playlist.setCurrentIndex(album_art_view.count-1)
+            }
         }
     }
     // phát
@@ -262,9 +280,17 @@ Item {
         icon_released: "qrc:/images/Button Control/next.png"
         onClicked: {
             // khi tiến nếu index ở cuối danh sách thì gán về đầu danh sách
-            if (player.playlist.currentIndex < album_art_view.count -1)
-                player.playlist.next()
-            else player.playlist.setCurrentIndex(0)
+            if(shuffer.status === 1){
+                var newindex = Math.floor(Math.random() * album_art_view.count)
+                while(newindex === player.playlist.currentIndex){
+                    newindex = Math.floor(Math.random() * album_art_view.count)
+                }
+                player.playlist.setCurrentIndex(newindex)
+            }else {
+                if (player.playlist.currentIndex < album_art_view.count -1)
+                    player.playlist.setCurrentIndex(player.playlist.currentIndex + 1)
+                else player.playlist.setCurrentIndex(0)
+            }
         }
     }
     // lặp lại
@@ -283,8 +309,13 @@ Item {
                 APP_CTRL.playBackModeList(Playlist.CurrentItemInLoop)
             }
             else {
-                console.log("Playlist.Sequential ON")
-                APP_CTRL.playBackModeList(Playlist.Sequential)
+                if(shuffer.status === 1){
+                    console.log("Playlist.Random ON")
+                    APP_CTRL.playBackModeList(Playlist.Random)
+                }else {
+                    console.log("Playlist.Sequential ON")
+                    APP_CTRL.playBackModeList(Playlist.Sequential)
+                }
             }
         }
     }

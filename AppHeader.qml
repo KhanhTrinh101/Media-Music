@@ -42,6 +42,8 @@ Item {
             font.pixelSize: parent.height / 3
         }
         // icon lá cờ việt nam
+
+
         Image {
             id: vn_flag
             anchors.right: parent.right
@@ -55,7 +57,7 @@ Item {
                 width: parent.width
                 height: width / 1.5
                 anchors.verticalCenter: parent.verticalCenter
-                border.color: "gray"
+                border.color: "blue"
                 border.width: 3
                 color: "transparent"               
                 visible: vn_flag.click_vn_flag ? true : false
@@ -83,7 +85,7 @@ Item {
                 width: parent.width
                 height: width / 1.5
                 anchors.verticalCenter: parent.verticalCenter
-                border.color: "gray"
+                border.color: "blue"
                 border.width: 3
                 color: "transparent"
                 visible: us_flag.click_us_flag ? true : false
