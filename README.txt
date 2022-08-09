@@ -7,6 +7,7 @@ Mục đích project:
 	+ chuyển bài hát
 	+ lập lại một bài hát
 	+ nghe ngẩu nhiên các bài hát
+	+ hiển thị đa ngôn ngữ
 
 Chương trình được viết trên:
 	Qt Creator 5.0.3
