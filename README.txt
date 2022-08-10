@@ -10,7 +10,6 @@ Mục đích project:
 	+ hiển thị đa ngôn ngữ
 
 Chương trình được viết trên:
-	Qt Creator 5.0.3
-	Qt version 5.15.2
+	Qt Creator.
 
 
